@@ -1,25 +1,26 @@
 {
-  "author": "Refael Ackermann <refael@empeeric.com>",
-  "dependencies": {
-    "debug": "latest",
-    "lodash-contrib": "latest",
-    "opinion": "latest",
-    "socket.io": "latest"
-  },
-  "description": "load ready socket.io builerplate",
-  "devDependencies": {
-    "mocha": "latest"
-  },
-  "keywords": [
-    "socket.io"
-  ],
-  "license": "MIT",
-  "main": "index.js",
-  "name": "empeericaload",
-  "repository": "Empeeric/empeericaload",
-  "scripts": {
-    "start": "node --harmony index.js",
-    "test": "mocha"
-  },
-  "version": "0.0.0"
+   "author" : "Refael Ackermann <refael@empeeric.com>",
+   "dependencies" : {
+      "debug" : "latest",
+      "lodash-contrib" : "latest",
+      "opinion" : "latest",
+      "socket.io" : "latest"
+   },
+   "description" : "load ready socket.io builerplate",
+   "devDependencies" : {
+      "mocha" : "latest"
+   },
+   "engines" : {
+      "node" : ">= 0.11.13"
+   },
+   "keywords" : [ "socket.io" ],
+   "license" : "MIT",
+   "main" : "index.js",
+   "name" : "empeericaload",
+   "repository" : "Empeeric/empeericaload",
+   "scripts" : {
+      "start" : "node --harmony index.js",
+      "test" : "mocha"
+   },
+   "version" : "0.0.0"
 }
