@@ -1,0 +1,10 @@
+{>layout/}
+
+{<body}
+    <section id="top">
+        <div id="heading">
+            <h1 id="logo">Empeericaload</h1>
+            <p id="tagline">Gotta catch 'em all!</p>
+        </div>
+    </section>
+{/body}
