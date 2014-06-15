@@ -24,7 +24,7 @@ function createConfiguration(appName) {
     conf.MONGODB_URI = conf.MONGOLAB_URI || conf.MONGOHQ_URL || conf.MONGODB_URI;
     conf.createConfiguration = createConfiguration;
 
-    return module.exports = global.conf = conf;
+    return (module.exports = global.conf = conf);
 }
 
 
