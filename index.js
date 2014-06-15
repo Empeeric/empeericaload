@@ -2,7 +2,7 @@
 process.chdir(__dirname);
 
 var opinion = require('opinion');
-var socket = require('socket.io');
+var socketio = require('socket.io');
 var conf = require('./conf');
 
 
@@ -20,6 +20,7 @@ app.use(
 );
 
 
-app.listen(conf.PORT, function () {
+module.exports = app.listen(conf.PORT, function () {
+    app.socketio = socketio.listen(this);
     console.log("Server listening on %s", this._connectionKey);
 });
