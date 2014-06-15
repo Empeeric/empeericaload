@@ -1,0 +1,2 @@
+-r asynctrace
+-r test_common.js

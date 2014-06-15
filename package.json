@@ -52,7 +52,7 @@
   "repository": "Empeeric/empeericaload",
   "scripts": {
     "start": "node --harmony index.js",
-    "test": "mocha --harmony -r asynctrace"
+    "test": "mocha --harmony"
   },
   "version": "0.0.0"
 }
