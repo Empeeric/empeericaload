@@ -1,0 +1,16 @@
+{>layout/}
+
+{<body}
+    <div ng-app="spotsApp">
+        <div ng-controller="spotsCtrl">
+
+        </div>
+    </div>
+{/body}
+
+{<scripts}
+    <script src="/js/vendor/angular.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/controllers.js"></script>
+    <script src="/js/app.js"></script>
+{/scripts}
