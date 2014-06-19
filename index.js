@@ -21,9 +21,9 @@ app.get('/spots', function* () {
     yield this.render('spots');
 });
 
-//app.get('/spotsArray', function* () {
-//    yield this.res.json({spots: noise.getSpots()});
-//});
+app.get('/spotsArray', function* () {
+    this.body = {spots: noise.getSpots()};
+});
 
 module.exports = app.listen(conf.PORT, function () {
     console.log("Server listening on %s", this._connectionKey);

@@ -3,7 +3,12 @@
 {<body}
     <div ng-app="spotsApp">
         <div ng-controller="spotsCtrl">
-
+            <table>
+                <tr ng-repeat="spot in spots">
+                    <td>[[spot.title]]</td>
+                    <td>[[spot.value]]</td>
+                </tr>
+            </table>
         </div>
     </div>
 {/body}
