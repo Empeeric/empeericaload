@@ -1,0 +1,17 @@
+.container {
+    text-align: center;
+}
+.content {
+    width: 1080px;
+    margin: 50px auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+}

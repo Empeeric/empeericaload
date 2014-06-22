@@ -7,6 +7,7 @@ module.exports = function (app) {
         var rand = Math.round(Math.random() * 6000) + 1000;
         setTimeout(function () {
             spots[i].value = (Number(spots[i].value) + (Math.random() * Math.pow(-1, Math.floor(Math.random() * 2 + 1)))).toFixed(2);
+            app.webSockets.emit('spot update', spots[i]);
             loop(i);
         }, rand);
     };

@@ -2,18 +2,21 @@
 
 {<body}
     <div ng-app="spotsApp">
-        <div ng-controller="spotsCtrl">
-            <table>
-                <tr ng-repeat="spot in spots">
-                    <td>[[spot.title]]</td>
-                    <td>[[spot.value]]</td>
-                </tr>
-            </table>
+        <div class="container" ng-controller="spotsCtrl">
+            <div class="content">
+                <ul>
+                    <li ng-repeat="spot in spots">
+                        [[spot.title]] - [[spot.value]]
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 {/body}
 
 {<scripts}
+    <script src="/js/vendor/socket.io.js"></script>
+    <script src="/js/vendor/lodash.js"></script>
     <script src="/js/vendor/angular.js"></script>
     <script src="/js/services.js"></script>
     <script src="/js/controllers.js"></script>
