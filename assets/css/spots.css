@@ -15,3 +15,15 @@ ul li {
     width: 200px;
     text-align: left;
 }
+
+ul li.positive span {
+    color: limegreen;
+}
+
+ul li.negative span {
+    color: red;
+}
+
+ul li.neutral span {
+    color: yellow;
+}

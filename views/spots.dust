@@ -5,8 +5,8 @@
         <div class="container" ng-controller="spotsCtrl">
             <div class="content">
                 <ul>
-                    <li ng-repeat="spot in spots">
-                        [[spot.title]] - [[spot.value]]
+                    <li ng-repeat="spot in spots" class="[[spot.direction]]">
+                        [[spot.title]] - <span>[[spot.value]]</span>
                     </li>
                 </ul>
             </div>
