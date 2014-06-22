@@ -1,8 +1,9 @@
 "use strict";
+/*global angular,io,_*/
 var spotsControllers = angular.module('spotsControllers', ['spotsServices']);
 
 spotsControllers.controller('spotsCtrl', ['$scope', 'spotsFactory', function($scope, spotsFactory) {
-    $scope.socket = io.connect();
+    $scope.socket = io();
     $scope.spots = {};
 
     spotsFactory.get().then(function(data){

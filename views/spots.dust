@@ -15,7 +15,7 @@
 {/body}
 
 {<scripts}
-    <script src="/js/vendor/socket.io.js"></script>
+    <script src="/js/socket.io.js"></script>
     <script src="/js/vendor/lodash.js"></script>
     <script src="/js/vendor/angular.js"></script>
     <script src="/js/services.js"></script>

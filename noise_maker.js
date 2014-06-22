@@ -3,7 +3,7 @@ var _ = require('lodash');
 
 module.exports = function (app) {
     var spots = [];
-    var loop = function(i){
+    var loop = function (i) {
         var rand = Math.round(Math.random() * 6000) + 1000;
         setTimeout(function () {
             var new_val = (Number(spots[i].value) + (Math.random() * Math.pow(-1, Math.floor(Math.random() * 2 + 1)))).toFixed(2);
@@ -13,13 +13,13 @@ module.exports = function (app) {
             loop(i);
         }, rand);
     };
-    for(var i = 0; i < 300; i++){
-        spots.push({title: 'spot' + i, value : (Math.random() * 1000).toFixed(2), direction: 'neutral'});
+    for (var i = 0; i < 300; i++) {
+        spots.push({title: 'spot' + i, value: (Math.random() * 1000).toFixed(2), direction: 'neutral'});
         loop(i);
     }
     return {
-        getSpots: function(){
+        getSpots: function () {
             return spots;
         }
-    }
+    };
 };
