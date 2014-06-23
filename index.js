@@ -1,6 +1,5 @@
 "use strict";
 process.chdir(__dirname);
-require('asynctrace');
 
 var opinion = require('opinion');
 var redis = require('socket.io-redis/node_modules/redis');
