@@ -1,7 +1,11 @@
 "use strict";
 process.chdir(__dirname);
+require('asynctrace');
 
 var opinion = require('opinion');
+var redis = require('socket.io-redis/node_modules/redis');
+var redisAdapter = require('socket.io-redis');
+var url = require('url');
 var conf = require('./conf');
 var app = opinion({
     middlewareOrder: opinion.DEFAULT_MIDDLEWARE_STACK,
@@ -9,6 +13,16 @@ var app = opinion({
     statics: 'assets',
     render: ['views', 'dust'],
     socketio: { clientPath: '/js/socket.io.js' }
+});
+app.on('webSockets-bound', function () {
+    var redisOpts = url.parse(process.env.REDISCLOUD_URL);
+    redisOpts.host = redisOpts.host.split(':')[0];
+    var pubClient = redis.createClient(redisOpts.port, redisOpts.hostname, {no_ready_check: true});
+    pubClient.auth(redisOpts.auth.split(":")[1]);
+    var subClient = redis.createClient(redisOpts.port, redisOpts.hostname, {no_ready_check: true, detect_buffers: true});
+    subClient.auth(redisOpts.auth.split(":")[1]);
+    var adapter = redisAdapter({pubClient: pubClient, subClient: subClient});
+    app.webSockets.adapter(adapter);
 });
 
 var noise_maker = require('./noise_maker');
