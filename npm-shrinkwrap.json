@@ -137,7 +137,7 @@
       "from": "lodash-contrib@latest"
     },
     "opinion": {
-      "version": "1.0.13",
+      "version": "1.0.14",
       "from": "opinion@latest",
       "dependencies": {
         "await-event": {
