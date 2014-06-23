@@ -2,7 +2,6 @@
     text-align: center;
 }
 .content {
-    width: 1080px;
     margin: 50px auto;
 }
 
@@ -10,20 +9,58 @@ ul {
     list-style-type: none;
 }
 
+
+@-webkit-keyframes green {
+    0% {
+        background-color: white;
+        opacity:1;
+    }
+    50% {
+        background-color: limegreen;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+@-webkit-keyframes red {
+    0% {
+        background-color: white;
+        opacity:1;
+    }
+    50% {
+        background-color: red;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
 ul li {
     display: inline-block;
-    width: 200px;
-    text-align: left;
+    width: 150px;
+    text-align: center;
+    height: 3em;
+    border: 1px solid hsl(0, 0%, 0%);
+    vertical-align: middle;
+    margin: 0.1em;
+    border-radius: 7px;
 }
 
-ul li.positive span {
-    color: limegreen;
+ul li.positive {
+    -webkit-animation-name: green;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
 }
 
-ul li.negative span {
-    color: red;
+ul li.negative {
+    -webkit-animation-name: red;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
 }
 
-ul li.neutral span {
-    color: yellow;
+ul li.neutral {
+    background-color: white;
 }

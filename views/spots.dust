@@ -6,7 +6,7 @@
             <div class="content">
                 <ul>
                     <li ng-repeat="spot in spots" class="[[spot.direction]]">
-                        [[spot.title]] - <span>[[spot.value]]</span>
+                        <strong>[[spot.title]]</strong> <br/> <span>[[spot.value]]</span>
                     </li>
                 </ul>
             </div>
